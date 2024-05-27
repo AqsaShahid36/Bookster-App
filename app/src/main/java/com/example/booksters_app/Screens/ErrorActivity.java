@@ -12,19 +12,20 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.booksters_app.R;
 
-public class SubscriptionActivity extends AppCompatActivity {
+public class ErrorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_subscription);
+        setContentView(R.layout.activity_error);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                SubscriptionActivity.super.onBackPressed();
+            public void onClick(View view) {
+                ErrorActivity.super.onBackPressed();
             }
         });
 
