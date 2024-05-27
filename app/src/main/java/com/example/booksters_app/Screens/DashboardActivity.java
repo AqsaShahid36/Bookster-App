@@ -15,6 +15,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.booksters_app.MainActivity;
 import com.example.booksters_app.R;
+import com.example.booksters_app.Screens.Fragments.HomeFragment;
+import com.example.booksters_app.Screens.Fragments.LibraryFragment;
+import com.example.booksters_app.Screens.Fragments.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
