@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "956295316391",
+    "firebase_url": "https://booksters-app-default-rtdb.firebaseio.com",
+    "project_id": "booksters-app",
+    "storage_bucket": "booksters-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956295316391:android:f3704630bdf09ba2632c82",
+        "android_client_info": {
+          "package_name": "com.example.booksters_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjF8pVHKPbXavXbjQUMI2XXYbdDpK7yps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
