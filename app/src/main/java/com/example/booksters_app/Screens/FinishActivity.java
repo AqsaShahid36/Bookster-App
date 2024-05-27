@@ -14,8 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.booksters_app.R;
 
-public class WelcomeActivity extends AppCompatActivity {
-
+public class FinishActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -24,7 +23,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_finish);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -33,17 +32,19 @@ public class WelcomeActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         if(sharedPreferences.getString("finishStatus","").equals("true")){
-            startActivity(new Intent(WelcomeActivity.this, FinishActivity.class));
+            startActivity(new Intent(FinishActivity.this, DashboardActivity.class));
             finish();
         }
 
-        findViewById(R.id.skipBtn).setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.finishBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WelcomeActivity.this, FinishActivity.class));
+                editor.putString("finishStatus","true");
+                editor.commit();
+                startActivity(new Intent(FinishActivity.this, DashboardActivity.class));
                 finish();
             }
         });
-
     }
 }

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     style="@style/ScreenBg"
-    tools:context=".Screens.WelcomeActivity">
+    tools:context=".Screens.FinishActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -17,44 +16,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:padding="30dp"
         android:gravity="center"
-        android:padding="30dp">
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            style="@style/finishImage"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome !"
-            style="@style/welcomeLabel"/>
+            android:textAlignment="center"
+            android:text="You are ready to go!"
+            android:layout_marginTop="30dp"
+            style="@style/onBoardingTitle" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Find what \nyou are \nlooking for"
-            android:lineHeight="65dp"
-            style="@style/welcomeTitle"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="By personalize your account, we can help you to find what you like."
+            android:text="Congratulation, any interesting topics\n will be shortly in your hands."
+            android:textAlignment="center"
             android:layout_marginTop="12dp"
-            style="@style/welcomeContent"/>
+            style="@style/onBoardingContent"/>
 
         <Button
+            android:id="@+id/finishBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Personalize Your Account"
-            android:layout_marginTop="40dp"
+            android:text="Finish"
+            android:layout_marginTop="20dp"
             style="@style/flatButton"/>
-
-        <Button
-            android:id="@+id/skipBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Skip"
-            android:layout_marginTop="16dp"
-            style="@style/outlineButton"/>
 
     </LinearLayout>
 
