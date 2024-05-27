@@ -24,6 +24,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.booksters_app.Screens.SpalshScreenActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void checkStatus(Context context, String UID){
-        db.child("Users").child(UID).addValueEventListener(new valueEventListner() {
+        db.child("Users").child(UID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
@@ -142,5 +147,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
 }
