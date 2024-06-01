@@ -16,7 +16,7 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         app:lottie_autoPlay="true"
-    android:rotation="180"
+        android:rotation="180"
         style="@style/SplashLogo"/>
 
 
